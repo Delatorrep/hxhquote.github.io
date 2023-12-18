@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.quote-container {
+  text-align: center;
+  width: 70%;
+  max-width: 800px;
+  font-family: Impact, sans-serif; /* Change font to Impact */
+}
+
+.quote-and-author {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align items to the right */
+}
+
+.quote {
+  font-size: 2rem;
+  margin-bottom: 5px; /* Add some spacing between quote and author */
+  position: relative; /* Create a positioning context */
+}
+
+.quote::before,
+.quote::after {
+  content: '"';
+  position: absolute;
+  color: #555; /* Adjust the color of the quotes */
+  font-size: 2rem; /* Use the same font size as the text */
+  font-family: Impact, sans-serif; /* Use the same font as the text */
+  top: -20px; /* Position the quotes */
+}
+
+.quote::before {
+  left: -15px; /* Position the left quote */
+}
+
+.quote::after {
+  right: -15px; /* Position the right quote */
+}
+
+.author {
+  font-style: italic;
+  opacity: 0.8;
+  font-size: 1.5rem; /* Increase the font size of the author */
+}
